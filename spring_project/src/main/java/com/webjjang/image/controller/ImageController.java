@@ -146,7 +146,7 @@ public class ImageController {
 		log.info(deleteImage);
 		log.info(pageObject);
 		
-		// 1. DB의 정보를 지운다. - no
+		// 1. DB의 정보를 지운다. - no를 지운다.
 		service.delete(no);
 		
 		// 2. 서버에서 파일을 지운다. - deleteImage
