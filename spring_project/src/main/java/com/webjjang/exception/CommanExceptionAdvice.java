@@ -25,7 +25,7 @@ public class CommanExceptionAdvice {
 		// JSP 페이지로 예외를 전달하기 위해 model에 담는다.
 		model.addAttribute("exception", ex);
 		
-		// model 출력
+		// model 출력한다.
 		log.error(model);
 		
 		// JSP로 이동시킨다.
