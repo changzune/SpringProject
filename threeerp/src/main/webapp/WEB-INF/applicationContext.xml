@@ -54,7 +54,8 @@
 	<!-- ## MySQL setup ## -->
 	
 
-	
+
+<!--  	
     <bean id="mysqlDataSource" class="org.apache.commons.dbcp.BasicDataSource"
 		destroy-method="close">
 		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
@@ -63,8 +64,10 @@
 		<property name="password" value="hwangkh704!" />
 		<property name="validationQuery" value="select 1" />
 	</bean> 
+	
+	 -->	
 
-<!--  	
+
    <bean id="mysqlDataSource" class="org.apache.commons.dbcp.BasicDataSource"
 		destroy-method="close">
 		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
@@ -73,9 +76,7 @@
 		<property name="password" value="hwangkh704!" />
 		<property name="validationQuery" value="select 1" />
 	</bean> 
--->
 
-	
 			 	
 	<!-- ## Mapper setup ## -->
 	<bean id="mysqlSqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
