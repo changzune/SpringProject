@@ -13,11 +13,35 @@
 <!-- sweet swal import -->
                               
 <script type="text/javascript">
+
+	var pagesize = 10;
+
+
     
-   
     $(document).ready(function() {
-       
+    	
+    	fn_seachlist();
+    	
+    	
    });
+    
+    function fn_seachlist(pagenum){
+    	
+    	// or 값이 없으면 1번 값이 넘어가고 값이 넘오면 값이된다.
+    	
+    	pagenum = pagenum || 1;
+    	
+    	var param = {
+    			pagenum:pagenum
+    			pagesize : pagesize,
+    			
+    			
+    			
+    	}
+    	
+    	
+    	
+    }
 
 </script>
 
