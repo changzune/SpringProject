@@ -48,8 +48,77 @@
                         class="btn_nav bold">Sample</span> <span class="btn_nav bold">SampleTest3
                         </span> <a href="/sampletest/samplepage3.do" class="btn_set refresh">새로고침</a>
                   </p>
+                  	<table style="margin-top: 10px" width="100%" cellpadding="5" cellspacing="0" border="1"
+                        align="left"
+                        style="collapse; border: 1px #50bcdf;">
+                        <tr style="border: 0px; border-color: blue">
+                           <td width="80" height="25" style="font-size: 120%;">&nbsp;&nbsp;</td>
+                           <td width="50" height="25" style="font-size: 100%; text-align:left; padding-right:25px;">
+     	                      	<select id="searchoption" name="searchoption" style="width: 150px;" v-model="searchKey">
+									<option value="grp_cod" >전체</option>
+									<option value="grp_cod" >제목</option>
+									<option value="grp_cod_nm" >내용</option>
+								</select> 
+							
+     	                       <input type="text" style="width: 300px; height: 25px;" id="searchword" name="searchword">                    
+	                           <a href="" class="btnType blue" id="btnSearchGrpcod" name="btn"><span>검  색</span></a>
+                           </td> 
+                           
+                        </tr>
+                     </table> 
+                  <br>
+                
+	                 <table class="col">
+								<caption>caption</caption>
+								<colgroup>
+									<col width="6%">
+									<col width="54%">
+									<col width="20%">
+									<col width="20%">
+						
+								</colgroup>
+
+								<thead>
+									<tr>
+										<th scope="col">글번호</th>
+										<th scope="col">제목</th>
+										<th scope="col">등록일자</th>
+										<th scope="col">작성자</th>
+									</tr>
+								</thead>
+								<tbody id="listComnGrpCod"></tbody>
+							</table>
+					
+						<div class="paging_area"  id="listnation"> </div>
+						
+						</div> <!-- // content -->
+						
+						
+						
+						<table style="margin-top: 10px" width="100%" cellpadding="5" cellspacing="0" border="1"
+                        align="left"
+                        style="collapse; border: 1px #50bcdf;">
+                        <tr style="border: 0px; border-color: blue">
+                           <td width="80" height="25" style="font-size: 120%;">&nbsp;&nbsp;</td>
+                           <td width="50" height="25" style="font-size: 100%; text-align:left; padding-right:25px;">
+     	                      <select id="searchKey" name="searchKey" style="width: 150px;" v-model="searchKey">
+									<option value="grp_cod" >그룹코드</option>
+									<option value="grp_cod_nm" >그룹코드명</option>
+							</select> 
+							
+     	                       <input type="text" style="width: 300px; height: 25px;" id="sname" name="sname">                    
+	                           <a href="" class="btnType blue" id="btnSearchGrpcod" name="btn"><span>검  색</span></a>
+                           </td> 
+                           
+                        </tr>
+                     </table> 
                   
-                  <br> page7     
+                  
+                  
+                  
+                  
+                  
+                      
            </div> <!--// content -->
 
                <h3 class="hidden">풋터 영역</h3>
