@@ -49,13 +49,19 @@
     		fn_listcallback(returndata, pagenum);
     		
     	}
+    	//목록만 json 대신에 text 방식으로 받아야 한다.
+    	callAjax("/smapletest/smaplepage7list.do", "post", "text", true, param, listcallback);
     	
-    	allAjax("/system/saveComnGrpCod.do", "post", "json", true, $("#myForm").serialize(), resultCallback);
+    }
+    
+    function fn_listcallback(returndata, pagenum){
     	
-    	
+    	console.log("fn_listcallback :" + returndata);
     	
     	
     }
+    
+    
 
 </script>
 

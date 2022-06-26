@@ -105,15 +105,7 @@ public class sampletestController {
       return "sampletest/samplepage5";
    }
    
-   
-
-   
-   
-   
-   
-   
-   
-   
+ 
    @RequestMapping("samplepage6.do")
    public String samplepage6(Model model, @RequestParam Map<String, Object> paramMap, HttpServletRequest request,
          HttpServletResponse response, HttpSession session) throws Exception {
@@ -215,6 +207,24 @@ public class sampletestController {
 
       return "sampletest/samplepage7";
    }
+   
+   @RequestMapping("smaplepage7list.do")
+   public String smaplepage7list(Model model, @RequestParam Map<String, Object> rparm) {
+	   
+	   
+	      logger.info("+ Start " + className + ".smaplepage7list");
+	      logger.info("   - rparm : " + rparm);
+	      
+	      
+	      logger.info("+ End " + className + ".smaplepage7list");
+
+	      return "sampletest/smaplepage7list";
+	   
+	   
+   }
+   
+   
+   
    
 
    @RequestMapping("samplepage8.do")
