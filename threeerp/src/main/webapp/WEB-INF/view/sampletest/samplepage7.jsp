@@ -30,14 +30,28 @@
     	// or 값이 없으면 1번 값이 넘어가고 값이 넘오면 값이된다.
     	
     	pagenum = pagenum || 1;
+    	//$("#searchoption") 지정자
+    	// val() 값을 가져와서 담는다. 
+    	var searchoption = $("#searchoption").val();
+    	var searchword = $("#searchword").vla();
     	
+    	
+    	//json 형태로 간다.
     	var param = {
-    			pagenum:pagenum
+    			pagenum : pagenum
     			pagesize : pagesize,
-    			
-    			
-    			
+    			searchoption : searchoption,
+    			searchword : searchword
     	}
+    	//controller 에서 결과치를 받자마자 실행해주는 callback ajax
+    	
+    	var listcallback = function(returndata){
+    		fn_listcallback(returndata, pagenum);
+    		
+    	}
+    	
+    	allAjax("/system/saveComnGrpCod.do", "post", "json", true, $("#myForm").serialize(), resultCallback);
+    	
     	
     	
     	
