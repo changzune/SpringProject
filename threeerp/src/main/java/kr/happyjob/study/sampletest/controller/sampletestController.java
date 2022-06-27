@@ -199,26 +199,37 @@ public class sampletestController {
    public String samplepage7(Model model, @RequestParam Map<String, Object> paramMap, HttpServletRequest request,
          HttpServletResponse response, HttpSession session) throws Exception {
       
-      logger.info("+ Start " + className + ".initComnCod");
+      logger.info("+ Start " + className + ".samplepage7");
       logger.info("   - paramMap : " + paramMap);
       
       
-      logger.info("+ End " + className + ".initComnCod");
+      logger.info("+ End " + className + ".samplepage7");
 
       return "sampletest/samplepage7";
    }
    
-   @RequestMapping("smaplepage7list.do")
+   @RequestMapping("samplepage7list.do")
    public String smaplepage7list(Model model, @RequestParam Map<String, Object> rparm) {
 	   
 	   
-	      logger.info("+ Start " + className + ".smaplepage7list");
+	      logger.info("+ Start " + className + ".samplepage7list");
 	      logger.info("   - rparm : " + rparm);
 	      
+	      logger.info("+ End " + className + ".samplepage7list");
 	      
-	      logger.info("+ End " + className + ".smaplepage7list");
+	      
+	      
+	      
+	      
+	      
+	      
+	      int totalcnt = 0;
+	      //jsp 되돌려줄 때 
+	      model.addAttribute("totalcnt", totalcnt);
+	      
+	      
 
-	      return "sampletest/smaplepage7list";
+	      return "sampletest/samplepage7list";
 	   
 	   
    }

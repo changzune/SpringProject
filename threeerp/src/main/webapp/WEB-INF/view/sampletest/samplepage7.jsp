@@ -33,12 +33,12 @@
     	//$("#searchoption") 지정자
     	// val() 값을 가져와서 담는다. 
     	var searchoption = $("#searchoption").val();
-    	var searchword = $("#searchword").vla();
+    	var searchword = $("#searchword").val();
     	
     	
     	//json 형태로 간다.
     	var param = {
-    			pagenum : pagenum
+    			pagenum : pagenum,
     			pagesize : pagesize,
     			searchoption : searchoption,
     			searchword : searchword
@@ -50,7 +50,7 @@
     		
     	}
     	//목록만 json 대신에 text 방식으로 받아야 한다.
-    	callAjax("/smapletest/smaplepage7list.do", "post", "text", true, param, listcallback);
+    	callAjax("/sampletest/samplepage7list.do", "post", "text", true, param, listcallback);
     	
     }
     
@@ -58,6 +58,12 @@
     	
     	console.log("fn_listcallback :" + returndata);
     	
+    	//모두 없앤다. 다시 넣는다 
+    $("#listnotice").empty().append(returndata);
+    	
+    	
+    	
+    console.log("fn_listcallback totalcnt :" + $("#totalcnt").val());
     	
     }
     
@@ -130,40 +136,14 @@
 										<th scope="col">작성자</th>
 									</tr>
 								</thead>
-								<tbody id="listComnGrpCod"></tbody>
+								<tbody id="listnotice"></tbody>
 							</table>
 					
-						<div class="paging_area"  id="listnation"> </div>
+						<div class="paging_area"  id="listnotice"> </div>
 						
 						</div> <!-- // content -->
 						
-						
-						
-						<table style="margin-top: 10px" width="100%" cellpadding="5" cellspacing="0" border="1"
-                        align="left"
-                        style="collapse; border: 1px #50bcdf;">
-                        <tr style="border: 0px; border-color: blue">
-                           <td width="80" height="25" style="font-size: 120%;">&nbsp;&nbsp;</td>
-                           <td width="50" height="25" style="font-size: 100%; text-align:left; padding-right:25px;">
-     	                      <select id="searchKey" name="searchKey" style="width: 150px;" v-model="searchKey">
-									<option value="grp_cod" >그룹코드</option>
-									<option value="grp_cod_nm" >그룹코드명</option>
-							</select> 
-							
-     	                       <input type="text" style="width: 300px; height: 25px;" id="sname" name="sname">                    
-	                           <a href="" class="btnType blue" id="btnSearchGrpcod" name="btn"><span>검  색</span></a>
-                           </td> 
-                           
-                        </tr>
-                     </table> 
-                  
-                  
-                  
-                  
-                  
-                  
-                      
-           </div> <!--// content -->
+					
 
                <h3 class="hidden">풋터 영역</h3>
                <jsp:include page="/WEB-INF/view/common/footer.jsp"></jsp:include>
