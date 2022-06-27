@@ -24,6 +24,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import kr.happyjob.study.common.comnUtils.ComnCodUtil;
 import kr.happyjob.study.sampletest.model.Sam6list;
+import kr.happyjob.study.sampletest.model.Sam7list;
 
 import kr.happyjob.study.sampletest.service.SampletestService;;
 
@@ -219,7 +220,7 @@ public class sampletestController {
 	      
 	      
 	      
-	      
+	      Sam7list searchlist = 
 	      
 	      
 	      
