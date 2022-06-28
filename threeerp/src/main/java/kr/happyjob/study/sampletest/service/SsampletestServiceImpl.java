@@ -39,7 +39,7 @@ public class SsampletestServiceImpl implements SsampletestService {
 	private String noticePath;
 	
 	/** 목록*/
-	public List<Sam6list> samplepage6list(Map<String, Object> paramMap) throws Exception {
+	public List<Sam7list> samplepage6list(Map<String, Object> paramMap) throws Exception {
 		return sampletestDao.samplepage6list(paramMap);
 	}
 
