@@ -15,10 +15,12 @@ import org.springframework.web.multipart.MultipartHttpServletRequest;
 
 import kr.happyjob.study.common.comnUtils.FileUtilCho;
 import kr.happyjob.study.common.comnUtils.ComnUtil;
+import kr.happyjob.study.sampletest.model.Sam6list;
 import kr.happyjob.study.sampletest.model.Sam7list;
 
 
 import kr.happyjob.study.sampletest.dao.SampletestDao;
+import kr.happyjob.study.sampletest.dao.SsampletestDao;
 
 @Service("SsampletestService")
 public class SsampletestServiceImpl implements SsampletestService {
@@ -27,7 +29,7 @@ public class SsampletestServiceImpl implements SsampletestService {
 	private final Logger logger = LogManager.getLogger(this.getClass());
 	
 	@Autowired
-	private SampletestDao sampletestDao;
+	private SsampletestDao ssampletestDao;
 	
 	@Value("${fileUpload.rootPath}")
 	private String rootPath;
@@ -39,8 +41,8 @@ public class SsampletestServiceImpl implements SsampletestService {
 	private String noticePath;
 	
 	/** 목록*/
-	public List<Sam7list> samplepage6list(Map<String, Object> paramMap) throws Exception {
-		return sampletestDao.samplepage6list(paramMap);
+	public List<Sam7list> samplepage7list(Map<String, Object> paramMap) throws Exception {
+		return sampletestDao.samplepage7list(paramMap);
 	}
 
 	
@@ -51,7 +53,7 @@ public class SsampletestServiceImpl implements SsampletestService {
 
 	/** 한건 조회*/
 	public Sam7list samplepage6selectone(Map<String, Object> paramMap) throws Exception {
-		return sampletestDao.samplepage6selectone(paramMap);
+		return sampletestDao.samplepage7selectone(paramMap);
 	}
 	
 	// 등록
@@ -150,5 +152,19 @@ public class SsampletestServiceImpl implements SsampletestService {
 		}
 		
 		sampletestDao.samplepage6delete(paramMap);
+	}
+
+
+	@Override
+	public List<Sam6list> samplepage6list(Map<String, Object> paramMap) throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+
+	@Override
+	public Sam6list samplepage6selectone(Map<String, Object> paramMap) throws Exception {
+		// TODO Auto-generated method stub
+		return null;
 	}	
 }
