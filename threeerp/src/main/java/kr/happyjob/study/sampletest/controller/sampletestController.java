@@ -218,9 +218,9 @@ public class sampletestController {
 	      
 	      logger.info("+ End " + className + ".samplepage7list");
 	      
-	      
-	      
-	      Sam7list searchlist = 
+	     
+	      List<Sam7list> searchlist = sampletestService.samplepage7list(rparm);
+		   model.addAttribute("searchlist", searchlist);
 	      
 	      
 	      
