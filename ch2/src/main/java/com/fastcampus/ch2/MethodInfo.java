@@ -8,7 +8,7 @@ public class MethodInfo {
 	public static void main(String[] args) throws Exception{
 
 		//1.yoliTeller클래스 객체를 생성
-		Class clazz = Class.forName("com.fastcampus.ch2.YoilTeller");
+		Class clazz = Class.forName("com.fastcampus.ch2.YoilTellerMVC");
 		Object obj = clazz.newInstance();
 		
 		// 2.모든 매서드를 정보를 가져와서 배열을 저장
