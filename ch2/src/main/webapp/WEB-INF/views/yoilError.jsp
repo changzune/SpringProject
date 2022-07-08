@@ -1,3 +1,4 @@
+<%@ page contentType ="text/html;charset=utf-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page session="false" %>
 <html>
@@ -6,9 +7,8 @@
 </head>
 <body>
 <h1>
-	Hello world!  
+	잘못된 요청입니다. 년,월,일을 모두 올바르게 입력 해주세요. 
 </h1>
 
-<P>  The time on the server is ${serverTime}. </P>
 </body>
 </html>

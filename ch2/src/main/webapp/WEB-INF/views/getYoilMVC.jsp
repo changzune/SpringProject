@@ -7,7 +7,7 @@
 </head>
 <body>
 
-<p>${yesr }년 ${month }월 ${day }일은 ${yoil }입니다.</p>
+<p>getYoilMVC 입니다.</p>
 
 
 </body>
